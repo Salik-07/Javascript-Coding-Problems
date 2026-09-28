@@ -1,27 +1,24 @@
 # JavaScript Coding Problems
 
-Small, standalone JavaScript programs. Each file includes its expected output in a comment.
+This repository contains **43 JavaScript programs**. Each file includes its expected output in a comment.
+
+Run a program with `node filename.js`. The rate-limit example keeps its timer running.
 
 ## Problems
 
-- [List nested object keys](list-nested-object-keys.js)
-- [Check object properties](check-object-properties.js)
-- [Find duplicate array elements](find-duplicate-array-elements.js)
-- [Convert an object to entries](convert-object-to-entries.js)
-- [Check whether a string is a palindrome](check-palindrome.js) (also source problem 3)
-- [Count array element frequencies](count-array-element-frequencies.js)
-- [Chunk an array](chunk-array.js)
-- [Find the intersection of two arrays](find-array-intersection.js)
-- [Group users by city](group-users-by-city.js)
-
-Run a problem with `node filename.js`. The rate-limit example keeps its timer running.
-
-## More problems
-
-These 34 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above, and problem 15 repeats problem 4. The intentional error in problem 24 and the React example are omitted.
+The source numbers refer to `Problem solving.txt`. Problem 3 is covered by the palindrome file, problem 15 repeats problem 4, and the intentional error in problem 24 and the React example are omitted. The array-rotation files include multiple implementations of the same task.
 
 | Source | Problem |
 | --- | --- |
+| Initial set | [List nested object keys](list-nested-object-keys.js) |
+| Initial set | [Check object properties](check-object-properties.js) |
+| Initial set | [Find duplicate array elements](find-duplicate-array-elements.js) |
+| Initial set | [Convert an object to entries](convert-object-to-entries.js) |
+| Initial set / 3 | [Check whether a string is a palindrome](check-palindrome.js) |
+| Initial set | [Count array element frequencies](count-array-element-frequencies.js) |
+| Initial set | [Chunk an array](chunk-array.js) |
+| Initial set | [Find the intersection of two arrays](find-array-intersection.js) |
+| Initial set | [Group users by city](group-users-by-city.js) |
 | 1 | [Two sum indices](two-sum-indices.js) |
 | 2 | [Chain calculator operations](chain-calculator-operations.js) |
 | 4, 15 | [Compress consecutive number ranges](compress-consecutive-number-ranges.js) |
