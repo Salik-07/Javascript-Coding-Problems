@@ -2,11 +2,11 @@
 
 This repository contains **43 JavaScript programs**. Each file includes its expected output in a comment.
 
-Run a program with `node filename.js`. The rate-limit example keeps its timer running.
+Run a program with `node filename.js`. The rate-limit program resets request counts every minute, so it stays open after printing its output. Press Ctrl+C to stop it.
 
 ## Problems
 
-Some two-part examples use `a` and `b` suffixes. The array-rotation files include multiple implementations of the same task. The intentional error and React example from `Problem solving.txt` are omitted.
+Some two-part examples use `a` and `b` suffixes.
 
 | # | Problem |
 | --- | --- |
