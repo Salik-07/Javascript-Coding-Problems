@@ -18,13 +18,13 @@ Run a problem with `node filename.js`. The rate-limit example keeps its timer ru
 
 ## More problems
 
-These 36 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above. The React example is omitted.
+These 35 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above, and problem 15 repeats problem 4. The React example is omitted.
 
 | Source | Problem |
 | --- | --- |
 | 1 | [Two sum indices](two-sum-indices.js) |
 | 2 | [Chain calculator operations](chain-calculator-operations.js) |
-| 4 | [Compress consecutive number ranges](compress-consecutive-number-ranges.js) |
+| 4, 15 | [Compress consecutive number ranges](compress-consecutive-number-ranges.js) |
 | 5 | [Find a missing consecutive number](find-missing-consecutive-number.js) |
 | 6 | [Product of array except self](product-of-array-except-self.js) |
 | 7 | [Limit requests per user](limit-requests-per-user.js) |
@@ -34,7 +34,6 @@ These 36 standalone examples come from the JavaScript sections of `Problem solvi
 | 12 | [Find K closest numbers](find-k-closest-numbers.js) |
 | 13 | [Find the shortest graph path](find-shortest-graph-path.js) |
 | 14 | [Sum values by label](sum-values-by-label.js) |
-| 15 | [Format consecutive number ranges](format-consecutive-number-ranges.js) |
 | 16 | [Convert Roman numerals to integers](convert-roman-numerals-to-integers.js) |
 | 17 | [Frame strings with asterisks](frame-strings-with-asterisks.js) |
 | 18 | [Group route phone numbers](group-route-phone-numbers.js) |
