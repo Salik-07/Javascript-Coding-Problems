@@ -8,7 +8,7 @@ Small, standalone JavaScript programs. Each file includes its expected output in
 - [Check object properties](check-object-properties.js)
 - [Find duplicate array elements](find-duplicate-array-elements.js)
 - [Convert an object to entries](convert-object-to-entries.js)
-- [Check whether a string is a palindrome](check-palindrome.js)
+- [Check whether a string is a palindrome](check-palindrome.js) (also source problem 3)
 - [Count array element frequencies](count-array-element-frequencies.js)
 - [Chunk an array](chunk-array.js)
 - [Find the intersection of two arrays](find-array-intersection.js)
@@ -18,13 +18,12 @@ Run any problem with `node filename.js`.
 
 ## More problems
 
-These 37 standalone examples come from the JavaScript sections of `Problem solving.txt`. The React example is omitted.
+These 36 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above. The React example is omitted.
 
 | Source | Problem |
 | --- | --- |
 | 1 | [Two sum indices](two-sum-indices.js) |
 | 2 | [Chain calculator operations](chain-calculator-operations.js) |
-| 3 | [Check palindrome with a message](check-palindrome-with-message.js) |
 | 4 | [Compress consecutive number ranges](compress-consecutive-number-ranges.js) |
 | 5 | [Find a missing consecutive number](find-missing-consecutive-number.js) |
 | 6 | [Product of array except self](product-of-array-except-self.js) |
