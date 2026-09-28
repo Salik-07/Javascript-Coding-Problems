@@ -14,11 +14,11 @@ Small, standalone JavaScript programs. Each file includes its expected output in
 - [Find the intersection of two arrays](find-array-intersection.js)
 - [Group users by city](group-users-by-city.js)
 
-Run a problem with `node filename.js`. The rate-limit example keeps its timer running, and the undefined-variable example intentionally raises a `ReferenceError`.
+Run a problem with `node filename.js`. The rate-limit example keeps its timer running.
 
 ## More problems
 
-These 35 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above, and problem 15 repeats problem 4. The React example is omitted.
+These 34 standalone examples come from the JavaScript sections of `Problem solving.txt`. Source problem 3 is covered by the palindrome file above, and problem 15 repeats problem 4. The intentional error in problem 24 and the React example are omitted.
 
 | Source | Problem |
 | --- | --- |
@@ -42,7 +42,6 @@ These 35 standalone examples come from the JavaScript sections of `Problem solvi
 | 21 | [Find the second largest number](find-second-largest-number.js) |
 | 22 | [Reassign function arguments](reassign-function-arguments.js) |
 | 23 | [Shallow copy an array with `concat`](shallow-copy-array-with-concat.js) |
-| 24 | [Catch an undefined variable reference](catch-undefined-variable-reference.js) |
 | 25 | [Customize JSON serialization with `toJSON`](customize-json-stringify-with-tojson.js) |
 | 26 | [Count truthy array elements](count-truthy-array-elements.js) |
 | 27 | [Run length encode a string](run-length-encode-string.js) |
