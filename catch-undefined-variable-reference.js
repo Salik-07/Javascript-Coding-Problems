@@ -1,6 +1,3 @@
-// Expected output: ReferenceError: x is not defined
-try {
-  console.log('x', x);
-} catch (error) {
-  console.log(`${error.name}: ${error.message}`);
-}
+// Expected error: ReferenceError: x is not defined
+
+console.log('x', x); //RefrenceError: x is not defined

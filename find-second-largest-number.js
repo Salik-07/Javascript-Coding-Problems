@@ -1,16 +1,20 @@
-// Expected output: 10
-function secondLargest(nums) {
+// Expected output:
+// 10
+
+const secondLargest = (nums) => {
   let largest = nums[0];
-  let runnerUp = -Infinity;
+  let sLargest = -Infinity;
+
   for (let i = 1; i < nums.length; i++) {
     if (nums[i] > largest) {
-      runnerUp = largest;
+      sLargest = largest;
       largest = nums[i];
-    } else if (nums[i] < largest && nums[i] > runnerUp) {
-      runnerUp = nums[i];
+    } else if (nums[i] < largest && nums[i] > sLargest) {
+      sLargest = nums[i];
     }
   }
-  return runnerUp;
-}
+
+  return sLargest;
+};
 
 console.log(secondLargest([10, 5, 12]));

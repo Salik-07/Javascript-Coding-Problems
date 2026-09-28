@@ -1,12 +1,21 @@
-// Expected output: lephant
+// Expected output:
+// lephant
+
 function removeOccurences(input) {
-  const characters = [];
-  for (const character of input) {
-    const index = characters.indexOf(character);
-    if (index >= 0) characters.splice(index, 1);
-    characters.push(character);
+  const elem = [];
+
+  for (let i = 0; i < input.length; i++) {
+    if (!elem.includes(input[i])) {
+      elem.push(input[i]);
+    } else {
+      const ind = elem.findIndex((e) => e === input[i]);
+
+      elem.splice(ind, 1);
+      elem.push(input[i]);
+    }
   }
-  return characters.join('');
+
+  return elem.join('');
 }
 
 console.log(removeOccurences('elephant'));

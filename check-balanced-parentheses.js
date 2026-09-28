@@ -1,16 +1,38 @@
-// Expected output, one line per input: true, false, false, true, true
+// Expected output:
+// true
+// false
+// false
+// true
+// true
+
 function isBalancedParentheses(input) {
-  const stack = [];
-  for (const char of input) {
-    if (char === '(') stack.push(char);
-    else if (char === ')') {
-      if (stack.length === 0) return false;
-      stack.pop();
+    // Stack to keep track of opening parentheses
+    let stack = [];
+
+    // Loop through each character in the input string
+    for (let char of input) {
+        // If the character is an opening parenthesis, push it to the stack
+        if (char === '(') {
+            stack.push(char);
+        }
+        // If the character is a closing parenthesis
+        else if (char === ')') {
+            // If the stack is empty, it means there's no matching opening parenthesis
+            if (stack.length === 0) {
+                return false;
+            }
+            // Pop the top of the stack (which should be an opening parenthesis)
+            stack.pop();
+        }
     }
-  }
-  return stack.length === 0;
+
+    // If the stack is empty, all opening parentheses have matching closing parentheses
+    return stack.length === 0;
 }
 
-for (const input of ['(())', '((())', '(()))', '()()()', '']) {
-  console.log(isBalancedParentheses(input));
-}
+// Test cases
+console.log(isBalancedParentheses("(())"));    // Output: true
+console.log(isBalancedParentheses("((())"));   // Output: false
+console.log(isBalancedParentheses("(()))"));   // Output: false
+console.log(isBalancedParentheses("()()()"));  // Output: true
+console.log(isBalancedParentheses(""));        // Output: true

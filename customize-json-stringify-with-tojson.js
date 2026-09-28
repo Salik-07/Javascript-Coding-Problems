@@ -1,13 +1,16 @@
 // Expected output:
-// toJSON called for: Hal
+// { name: 'Hal', age: [Function: age], toJSON: [Function (anonymous)] }
 // {"name":"Hal"}
+
 const pet = {
   name: 'Hal',
-  age() { console.log('18'); },
+  age() {
+    console.log('18');
+  },
 };
 
 pet.toJSON = function () {
-  console.log('toJSON called for:', this.name);
+  console.log(this);
   return this;
 };
 

@@ -1,14 +1,37 @@
-// Expected output, one line per input: true, true, false, false, true
+// Expected output:
+// true
+// true
+// false
+// false
+// true
+
 function isValidParenthesis(str) {
-  const stack = [];
-  const matchingPairs = { ')': '(', ']': '[', '}': '{' };
-  for (const char of str) {
-    if ('([{'.includes(char)) stack.push(char);
-    else if (char in matchingPairs && stack.pop() !== matchingPairs[char]) return false;
+  const strStack = [];
+  const matchingPairs = {
+    ')': '(',
+    ']': '[',
+    '}': '{',
+  };
+
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] === '(' || str[i] === '[' || str[i] === '{') {
+      strStack.push(str[i]);
+    } else if (str[i] === ')' || str[i] === ']' || str[i] === '}') {
+      if (strStack.length === 0) {
+        return false;
+      }
+
+      if (strStack.pop() !== matchingPairs[str[i]]) {
+        return false;
+      }
+    }
   }
-  return stack.length === 0;
+
+  return strStack.length === 0 ? true : false;
 }
 
-for (const input of ['()', '()[]{}', '(]', '([)]', '{[]}']) {
-  console.log(isValidParenthesis(input));
-}
+console.log(isValidParenthesis('()'));
+console.log(isValidParenthesis('()[]{}'));
+console.log(isValidParenthesis('(]'));
+console.log(isValidParenthesis('([)]'));
+console.log(isValidParenthesis('{[]}'));

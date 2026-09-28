@@ -14,7 +14,7 @@ Small, standalone JavaScript programs. Each file includes its expected output in
 - [Find the intersection of two arrays](find-array-intersection.js)
 - [Group users by city](group-users-by-city.js)
 
-Run any problem with `node filename.js`.
+Run a problem with `node filename.js`. The rate-limit example keeps its timer running, and the undefined-variable example intentionally raises a `ReferenceError`.
 
 ## More problems
 

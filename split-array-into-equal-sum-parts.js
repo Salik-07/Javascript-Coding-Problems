@@ -1,18 +1,38 @@
 // Expected output:
 // First subarray: [ 1, 2, 3, 4 ]
 // Second subarray: [ 3, 2, 5 ]
+
 function splitArrayIntoTwoSubarrays(nums) {
-  const total = nums.reduce((sum, value) => sum + value, 0);
-  if (total % 2 !== 0) return null;
-  let running = 0;
-  for (let i = 0; i < nums.length; i++) {
-    running += nums[i];
-    if (running === total / 2) return [nums.slice(0, i + 1), nums.slice(i + 1)];
+  const totalSum = nums.reduce((acc, curr) => acc + curr, 0);
+
+  // If the total sum is odd, we can't split it into two equal sum subarrays
+  if (totalSum % 2 !== 0) {
+    return null; // It's not possible to split
   }
-  return null;
+
+  const targetSum = totalSum / 2;
+  let runningSum = 0;
+
+  // Iterate over the array to check if we can split at some point
+  for (let i = 0; i < nums.length; i++) {
+    runningSum += nums[i];
+
+    // If the running sum equals half of the total sum, we can split the array
+    if (runningSum === targetSum) {
+      const firstSubarray = nums.slice(0, i + 1);
+      const secondSubarray = nums.slice(i + 1);
+      return [firstSubarray, secondSubarray];
+    }
+  }
+
+  return null; // No valid split found
 }
 
-const result = splitArrayIntoTwoSubarrays([1, 2, 3, 4, 3, 2, 5]);
+// Example usage:
+const nums = [1, 2, 3, 4, 3, 2, 5];
+// const nums = [2, 1, 3];
+// const nums = [1, -1];
+const result = splitArrayIntoTwoSubarrays(nums);
 if (result) {
   console.log('First subarray:', result[0]);
   console.log('Second subarray:', result[1]);
