@@ -13,7 +13,7 @@ const windowSizeInMinutes = 1; // per minute
 
 setInterval(() => {
   requestCounts = {}; // Reset the counts every minute
-}, windowSizeInMinutes * 60 * 1000);
+}, windowSizeInMinutes * 60 * 1000).unref();
 
 function isRateLimited(user) {
   if (!requestCounts[user]) {
