@@ -13,4 +13,4 @@ for (let i = 0; i < combined.length; i++) {
   }
 }
 
-console.log('Union:', JSON.stringify(union));
+console.log("Union:", JSON.stringify(union));
