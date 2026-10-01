@@ -1,6 +1,6 @@
 # JavaScript Coding Problems
 
-This repository contains **44 JavaScript programs**. Each file includes its expected output in a comment.
+This repository contains **46 JavaScript programs**. Each file includes its expected output in a comment.
 
 Run a program with `node filename.js`.
 
@@ -54,3 +54,5 @@ Some two-part examples use `a` and `b` suffixes.
 | 42 | [Split an array into equal sum parts](split-array-into-equal-sum-parts.js) |
 | 43 | [Chained object assignment](chained-object-assignment.js) |
 | 44 | [Find the union of two arrays](find-array-union.js) |
+| 45 | [Generate an OTP](generate-OTP.js) |
+| 46 | [FizzBuzz using counters](fizz-buzz-with-counters.js) |
