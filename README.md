@@ -1,6 +1,6 @@
 # JavaScript Coding Problems
 
-This repository contains **46 JavaScript programs**. Each file includes its expected output in a comment.
+This repository contains **48 JavaScript programs**. Each file includes its expected output in a comment.
 
 Run a program with `node filename.js`.
 
@@ -56,3 +56,5 @@ Some two-part examples use `a` and `b` suffixes.
 | 44 | [Find the union of two arrays](find-array-union.js) |
 | 45 | [Generate an OTP](generate-OTP.js) |
 | 46 | [FizzBuzz using counters](fizz-buzz-with-counters.js) |
+| 47 | [Count vowels in a string](count-vowels.js) |
+| 48 | [JavaScript interview questions](js-interview-questions.js) |
