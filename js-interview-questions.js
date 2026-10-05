@@ -183,3 +183,115 @@ const numberLikeObject = { valueOf: () => 2 };
 console.log(numberLikeObject + 3);
 console.log(numberLikeObject == 2);
 console.log(numberLikeObject > 1);
+
+// X------X--------X--------X
+
+function testFunction() {
+  try {
+    return 1;
+  } finally {
+    return 2;
+  }
+}
+
+// If we return from try and also return from finally, the finally return takes priority.
+// So this function returns 2, not 1.
+const resultValue = testFunction();
+console.log(resultValue);
+// Output: 2
+
+// X------X--------X--------X
+
+// splice(start, deleteCount) removes elements from the array.
+// Here, remove all elements from index 0 to the end.
+const numbersList = [1, 2, 3];
+numbersList.splice(0, numbersList.length);
+console.log(numbersList);
+// Output: []
+
+// X------X--------X--------X
+
+// const MESSAGE = 108;
+
+// function logMessage() {
+//   console.log(MESSAGE);
+//   const MESSAGE = 109;
+//   // var MESSAGE = 110; // If we use var instead of const, it will log undefined because var is hoisted and initialized to undefined.
+// }
+
+// logMessage(); // ReferenceError: Cannot access 'MESSAGE' before initialization
+// // Explanation:
+// // In JavaScript, variables declared with const and let are hoisted but not initialized.
+// // This means they are in a "temporal dead zone" from the start of the block until the declaration is encountered.
+// // So when logMessage() tries to access MESSAGE before its declaration, it throws a ReferenceError.
+
+// X------X--------X--------X
+
+// function greatGrandParent() {
+//   console.log("greatGrandParent");
+//   grandParent();
+// }
+
+// function grandParent() {
+//   console.log("grandParent");
+//   parent();
+// }
+
+// function parent() {
+//   console.log("parent");
+//   child();
+// }
+
+// function child() {
+//   console.log("child");
+//   innerChild();
+// }
+
+// function innerChild() {
+//   console.trace();
+// }
+
+// // The call stack shows the sequence of functions being executed.
+// // Each function calls the next one, so the trace prints the full chain from innerChild -> child -> parent -> grandParent -> greatGrandParent.
+// greatGrandParent();
+
+// X------X--------X--------X
+
+// function checkRequiredParameter() {
+//   throw new Error("Param required");
+// }
+
+// function showName(name = checkRequiredParameter()) {
+//   console.log(name);
+// }
+
+// // Default parameters are evaluated when no argument is passed.
+// // If the default value is a function call that throws, the error is thrown immediately.
+// // So the first call fails, and the second call prints "Salik".
+// showName(); // Output: throws Error: Param required
+
+// showName("Salik"); // Output: Salik
+
+// X------X--------X--------X
+
+// Create a function add without using a function and arrow function
+const a = 10;
+const b = 20;
+
+const add = new Function("a", "b", "console.log(a + b);");
+
+add(a, b);
+
+// X------X--------X--------X
+
+function getSum() {
+  return 2 + 2;
+}
+
+function getSquare() {
+  return 4 * 4;
+}
+
+let finalResult = (getSum(), getSquare());
+// Comma operator evaluates left to right and returns only the last value.
+console.log(finalResult); // Output: 16
