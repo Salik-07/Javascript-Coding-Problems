@@ -295,3 +295,29 @@ function getSquare() {
 let finalResult = (getSum(), getSquare());
 // Comma operator evaluates left to right and returns only the last value.
 console.log(finalResult); // Output: 16
+
+// X------X--------X--------X
+
+function addition(a = 5, b = 10) {
+  console.log(a + b);
+}
+
+addition(null, 27); // Output: 27
+// Default parameters apply only when an argument is omitted or is undefined.
+// Here, null is passed explicitly, so a stays null instead of becoming 5.
+// In addition with a number, JavaScript converts null to 0, giving 0 + 27 = 27.
+
+// X------X--------X--------X
+
+(async function () {
+  const data = await 1;
+  console.log(data);
+})();
+
+console.log(2);
+// Output order:
+// 2
+// 1
+// Even though 1 is already a value, await pauses the async function.
+// The synchronous console.log(2) runs first. The async function then resumes
+// in a microtask and logs 1.
